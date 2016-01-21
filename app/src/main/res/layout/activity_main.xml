@@ -3,9 +3,116 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/blackbg">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Subtotal"
+        android:id="@+id/subTotalLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff51ffe7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DiscountPercent"
+        android:id="@+id/discountPercentLabel"
+        android:layout_below="@+id/subTotalLabel"
+        android:layout_alignLeft="@+id/subTotalLabel"
+        android:layout_alignStart="@+id/subTotalLabel"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff51ffe7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DiscountAmount"
+        android:id="@+id/discountAmountLabel"
+        android:layout_below="@+id/discountPercentLabel"
+        android:layout_alignLeft="@+id/discountPercentLabel"
+        android:layout_alignStart="@+id/discountPercentLabel"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff51ffe7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Total"
+        android:id="@+id/totalLabel"
+        android:layout_below="@+id/discountAmountLabel"
+        android:layout_alignLeft="@+id/discountAmountLabel"
+        android:layout_alignStart="@+id/discountAmountLabel"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff51ffe7" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/subtotalEditText"
+        android:layout_alignTop="@+id/subTotalLabel"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:background="#ffffffff"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignWithParentIfMissing="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Percent"
+        android:id="@+id/percentTextView"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:autoText="true"
+        android:textColor="#ff51ffe7"
+        android:clickable="true"
+        android:layout_alignTop="@+id/discountPercentLabel"
+        android:layout_alignRight="@+id/subtotalEditText"
+        android:layout_alignEnd="@+id/subtotalEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Dollars"
+        android:id="@+id/discountTotalTextView"
+        android:textColor="#ff51ffe7"
+        android:layout_above="@+id/totalLabel"
+        android:layout_alignRight="@+id/percentTextView"
+        android:layout_alignEnd="@+id/percentTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalDollars"
+        android:id="@+id/totalTextView"
+        android:textColor="#ff51ffe7"
+        android:layout_alignTop="@+id/totalLabel"
+        android:layout_alignLeft="@+id/discountTotalTextView"
+        android:layout_alignStart="@+id/discountTotalTextView" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Calculate"
+        android:id="@+id/submitButton"
+        android:layout_below="@+id/totalLabel"
+        android:layout_alignLeft="@+id/totalLabel"
+        android:layout_alignStart="@+id/totalLabel"
+        android:layout_marginTop="124dp"
+        android:background="#ceb53a47"
+        android:layout_alignRight="@+id/totalTextView"
+        android:layout_alignEnd="@+id/totalTextView" />
 
 </RelativeLayout>

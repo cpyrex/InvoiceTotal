@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="Subtotal">Subtotal</string>
+    <string name="DiscountPercent">Discount Percent</string>
+    <string name="DiscountAmount">Discount Amount</string>
+    <string name="Total">Total</string>
+    <string name="Percent">10%</string>
+    <string name="Dollars">$0.00</string>
+    <string name="TotalDollars">$0.00</string>
+    <string name="Calculate">Calculate!!!</string>
 </resources>
